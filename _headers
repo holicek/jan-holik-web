@@ -1,0 +1,20 @@
+# Cloudflare Pages / Netlify — hlavičky odpovědí.
+# Na jiném hostingu (Wix, Apache, nginx) se tento soubor ignoruje.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+# Obrázky se mění jen výměnou souboru za nový název — týden je bezpečný.
+/assets/*
+  Cache-Control: public, max-age=604800
+
+# styles.css nemá v názvu hash, proto krátká platnost, aby se změny
+# projevily bez ručního mazání cache.
+/css/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+/*.html
+  Cache-Control: public, max-age=600, must-revalidate

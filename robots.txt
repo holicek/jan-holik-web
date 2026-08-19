@@ -1,0 +1,56 @@
+# www.jan-holik.cz
+
+# ---- Běžné vyhledávače -------------------------------------------
+User-agent: *
+Allow: /
+
+# ---- AI / LLM roboti ---------------------------------------------
+# Explicitně povoleno, aby se obsah mohl objevit v odpovědích
+# ChatGPT, Claude, Perplexity, Gemini a dalších asistentů.
+# Chcete-li některého robota zakázat, změňte jeho "Allow: /" na "Disallow: /".
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google — Gemini a AI přehledy
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot / Bing
+User-agent: Bingbot
+Allow: /
+
+# Common Crawl (veřejný datový korpus, ze kterého čerpá řada modelů)
+User-agent: CCBot
+Allow: /
+
+# ---- Mapa stránek ------------------------------------------------
+Sitemap: https://www.jan-holik.cz/sitemap.xml
