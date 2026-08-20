@@ -93,3 +93,6 @@ s trenérem nebo v týmu, konec kariéry a co bude dál.
 - [Sportovní koučink](https://www.jan-holik.cz/sportovni-koucink):
   mentální příprava sportovců, trenérů a týmů — pro koho to je, témata,
   průběh spolupráce, kvalifikace.
+- [Ochrana osobních údajů](https://www.jan-holik.cz/ochrana-osobnich-udaju):
+  zásady zpracování osobních údajů podle GDPR. Web nepoužívá cookies,
+  analytiku ani sledovací nástroje; jediným kontaktním kanálem je e-mail.
