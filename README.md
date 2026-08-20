@@ -72,6 +72,22 @@ Use a real encoder (`avifenc`, `cwebp`, Squoosh) or stay with JPEG.
 the square portrait). To regenerate it, re-create the temporary layout page
 and screenshot it at 1200×630 with headless Chrome.
 
+## URLs — no `.html`
+
+The Cloudflare Worker serves static assets with `.html` stripped and
+**307-redirects the extension form**:
+
+```
+/sportovni-koucink.html  ->  307  ->  /sportovni-koucink
+/index.html              ->  307  ->  /
+```
+
+So every canonical, sitemap entry, JSON-LD `@id`, Open Graph URL and internal
+link uses the extensionless form (`/sportovni-koucink`, `/`). **Do not
+reintroduce `.html` into links or SEO URLs** — it makes canonical tags point at
+a URL that redirects away from itself, which is a contradictory signal to
+search engines. The files on disk keep their `.html` names; only the URLs drop it.
+
 ## SEO
 
 Both pages carry:

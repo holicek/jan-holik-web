@@ -30,7 +30,7 @@ Jazyk: čeština (cs-CZ)
   zvládat úzkost a nejistotu.
 - [Párová a rodinná terapie](https://www.jan-holik.cz/#sluzby): když se doma
   přestává mluvit nebo se stále dokola vrací stejný konflikt.
-- [Sportovní koučink a mentální příprava](https://www.jan-holik.cz/sportovni-koucink.html):
+- [Sportovní koučink a mentální příprava](https://www.jan-holik.cz/sportovni-koucink):
   mentální příprava individuálních sportovců, trenérů a celých týmů —
   v tréninkovém cyklu, před závodem i po zranění.
 - [Koučink manažerů a vedení týmů](https://www.jan-holik.cz/#sluzby):
@@ -91,6 +91,6 @@ s trenérem nebo v týmu, konec kariéry a co bude dál.
 
 - [Úvod](https://www.jan-holik.cz/): služby, přístup, jak spolupráce
   probíhá, o mně, kvalifikace, kontakt.
-- [Sportovní koučink](https://www.jan-holik.cz/sportovni-koucink.html):
+- [Sportovní koučink](https://www.jan-holik.cz/sportovni-koucink):
   mentální příprava sportovců, trenérů a týmů — pro koho to je, témata,
   průběh spolupráce, kvalifikace.
