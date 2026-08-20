@@ -15,13 +15,20 @@ directly in `css/styles.css` so this folder is self-contained).
 site/
   index.html                    homepage
   sportovni-koucink.html        "Sportovní koučink" subpage
-  css/styles.css                tokens + all component/layout styles
+  ochrana-osobnich-udaju.html   GDPR privacy policy
+  css/styles.css                @font-face + tokens + all component/layout styles
   robots.txt                    crawl rules + sitemap reference
   sitemap.xml                   both URLs, with image entries
   llms.txt                      plain-text summary for AI assistants
   favicon.svg                   "JH" monogram, brand gradient
   apple-touch-icon.png          180×180 iOS home-screen icon
   _headers                      Cloudflare Pages / Netlify response headers
+  fonts/                        self-hosted woff2 (see note below)
+    quicksand-latin.woff2       body + headings, latin subset
+    quicksand-latin-ext.woff2   same, Czech diacritics
+    geist-latin.woff2           .tag labels only, latin subset
+    geist-latin-ext.woff2       same, Czech diacritics
+    LICENSE.txt                 SIL Open Font License 1.1 for both families
   assets/
     holik-portret.jpg           homepage hero (derived from fotka1.jpg)
     beach.avif                  sport page hero
@@ -31,6 +38,22 @@ site/
     fotka1.jpg                  ORIGINAL camera file — source only, not served
     texture-noise.png           grain overlay used on the dark quote bands
 ```
+
+## Fonts
+
+Quicksand and Geist are **self-hosted**, not loaded from Google Fonts. The
+`.woff2` files are the byte-identical variable subsets Google serves (latin and
+latin-ext, so Czech diacritics are covered), declared via `@font-face` at the
+top of `css/styles.css` with `font-weight: 500 700` / `500 600` ranges.
+
+Two reasons: loading a page then sends no request to any third party — which is
+why the privacy policy has no Google Fonts section — and one less DNS lookup and
+TLS handshake before text can paint.
+
+To refresh a font, re-download the woff2 from the Google Fonts CSS API using a
+weight *range* (`wght@500..700`), not a list — a single value returns a file
+clamped to that weight and bold silently stops working. Rename the file when its
+content changes: `_headers` marks `/fonts/*` immutable for a year.
 
 ## Running locally
 
