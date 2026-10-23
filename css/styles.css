@@ -60,7 +60,7 @@
   --cyan-50:  #EEFDFD;
   --cyan-100: #D3FAFA;
   --cyan-200: #ACF3F5;
-  --cyan-600: #1693A4;
+  --cyan-600: #137A88; /* ztmaveno z #1693A4 kvůli kontrastu 5:1 na bílé i cyan-50 */
 
   /* gradient partner */
   --blue-600: #1073B9;
@@ -68,7 +68,7 @@
   /* neutrals */
   --neutral-200: #E5E5E5;
   --slate-50:  #F8FAFC;
-  --slate-500: #62748E;
+  --slate-500: #5A6B85; /* ztmaveno z #62748E kvůli kontrastu 4,5:1 na purple-50 */
   --white: #FFFFFF;
 
   /* radius */
@@ -113,6 +113,12 @@ body {
 
 a { color: var(--purple-600); text-decoration: none; }
 a:hover { color: var(--purple-950); }
+/* Odkazy uvnitř běžného textu musí být rozpoznatelné i bez barvy (WCAG 1.4.1). */
+main p a:not(.btn):not(.email-link):not(.link-more), main li a:not(.btn) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
 
 :focus-visible {
   outline: 3px solid var(--purple-600);
@@ -308,7 +314,8 @@ img { max-width: 100%; display: block; }
 .quote-band__texture {
   position: absolute;
   inset: 0;
-  background-image: url(../assets/texture-noise.png);
+  /* Zrno generované SVG filtrem místo PNG (ušetří 66 kB a jeden požadavek). */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   opacity: 0.25;
   mix-blend-mode: overlay;
   pointer-events: none;
@@ -334,6 +341,76 @@ img { max-width: 100%; display: block; }
 .site-footer .wrap > nav a { color: var(--slate-500); }
 .site-footer .wrap > nav a:hover { color: var(--purple-600); }
 
+
+/* ---- Mobilní navigace ------------------------------------- */
+/* Tlačítko je v HTML vždy, zobrazí se jen pod 900 px (viz media query).
+   Otevřené menu se vysune pod lepivou hlavičku jako panel. */
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  color: var(--purple-950);
+  cursor: pointer;
+}
+.nav-toggle svg { width: 22px; height: 22px; }
+.nav-toggle .icon-close { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-menu { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
+
+/* ---- Časté otázky ------------------------------------------- */
+.faq { display: flex; flex-direction: column; gap: 12px; }
+.faq details {
+  background: #fff;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--purple-950);
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  flex: none;
+  color: var(--purple-600);
+  font-size: 24px;
+  line-height: 26px;
+}
+.faq details[open] summary::after { content: "−"; }
+.faq details > div {
+  padding: 0 24px 22px;
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 500;
+  color: var(--slate-500);
+}
+.faq details > div p { margin: 0 0 10px; }
+.faq details > div p:last-child { margin-bottom: 0; }
+
+/* ---- Textová stránka (článek) ------------------------------- */
+.prose { font-size: 17px; line-height: 29px; font-weight: 500; color: var(--slate-500); }
+.prose h2 { margin: 0 0 12px; font-size: 28px; line-height: 36px; font-weight: 700; letter-spacing: -0.01em; color: var(--purple-950); }
+.prose h3 { margin: 0 0 8px; font-size: 20px; line-height: 28px; font-weight: 700; color: var(--purple-950); }
+.prose p { margin: 0 0 14px; text-wrap: pretty; }
+.prose ul { margin: 0 0 14px; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
+.prose strong { color: var(--purple-950); }
+.prose > * + h2 { margin-top: 28px; }
+
 /* ---- Responsive (mirrors the approved mobile pass) --------- */
 @media (max-width: 900px) {
   .grid-2, .grid-3, .split { grid-template-columns: 1fr !important; gap: 32px !important; }
@@ -344,6 +421,26 @@ img { max-width: 100%; display: block; }
   .section, .site-header .wrap, .site-footer .wrap { padding-left: 20px !important; padding-right: 20px !important; }
   .quote-band { padding: 40px 28px !important; }
   .main-nav { display: none !important; }
+  .nav-toggle { display: inline-flex; }
+  .site-header .wrap { justify-content: flex-start; gap: 12px; }
+  .brand { margin-right: auto; }
+  .main-nav.is-open {
+    display: flex !important;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 20px 16px;
+    background: #fff;
+    border-bottom: 1px solid var(--neutral-200);
+    box-shadow: var(--shadow-lg);
+    font-size: 17px;
+  }
+  .main-nav.is-open a { padding: 14px 4px; border-bottom: 1px solid var(--neutral-200); }
+  .main-nav.is-open a:last-child { border-bottom: 0; }
 }
 
 /* Below ~520px the brand tagline + CTA no longer fit next to the logo

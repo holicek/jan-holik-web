@@ -3,27 +3,45 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.jan-holik.cz/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.jan-holik.cz/assets/holik-portret.jpg</image:loc>
-      <image:title>Bc. Jan Holík — psychoterapeut a kouč ICF</image:title>
+      <image:title>Bc. Jan Holík — psychoterapeut, Praha 5</image:title>
     </image:image>
   </url>
   <url>
+    <loc>https://www.jan-holik.cz/individualni-psychoterapie</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jan-holik.cz/parova-a-rodinna-terapie</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.jan-holik.cz/daseinsanalyza</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.jan-holik.cz/sportovni-koucink</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
       <image:loc>https://www.jan-holik.cz/assets/beach.avif</image:loc>
-      <image:title>Sportovní koučink a mentální příprava — Bc. Jan Holík</image:title>
+      <image:title>Sportovní koučink a mentální kouč Praha — Bc. Jan Holík</image:title>
     </image:image>
   </url>
   <url>
     <loc>https://www.jan-holik.cz/ochrana-osobnich-udaju</loc>
-    <lastmod>2026-08-20</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>

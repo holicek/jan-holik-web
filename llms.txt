@@ -1,10 +1,10 @@
-# Bc. Jan Holík — psychoterapie a koučink
+# Bc. Jan Holík — psychoterapeut, Praha 5 (Nové Butovice)
 
-> Daseinsanalytický psychoterapeut a kouč ICF v Praze. Pracuje s dospělými,
-> páry, rodinami, sportovci a manažery — osobně na Klinice rodinné terapie
-> Butovice (Praha 5) i online. Po letech ve vedení IT týmů a projektů
-> propojuje zkušenost z výkonového prostředí s hloubkou daseinsanalytické
-> psychoterapie.
+> Daseinsanalytický psychoterapeut v Praze 5. Individuální psychoterapie pro
+> dospělé a dospívající, párová a rodinná terapie — osobně na Klinice rodinné
+> terapie Butovice u metra Nové Butovice, nebo online. Doplňkově kouč ICF pro
+> sportovce, týmy a manažery. Po letech ve vedení IT týmů a projektů propojuje
+> zkušenost z výkonového prostředí s hloubkou daseinsanalytické psychoterapie.
 
 Web: https://www.jan-holik.cz/
 Jazyk: čeština (cs-CZ)
@@ -14,7 +14,8 @@ Jazyk: čeština (cs-CZ)
 - E-mail: info@jan-holik.cz
 - Adresa: Klinika rodinné terapie Butovice, Coral Office Park, budova C,
   4. patro, REGUS, Bucharova 2657/12, 158 00 Praha 5
-- Doprava: metro B — Nové Butovice, parkování OC Galerie Butovice
+- Doprava: metro B — Nové Butovice, parkování OC Galerie Butovice; dobře
+  dostupné ze Stodůlek, Lužin, Hůrky, Jinonic, Zličína i Smíchova
 - Ordinační hodiny: pondělí–pátek 8:00–18:00
 - Platba: QR kódem nebo na fakturu
 - Forma: osobně v Praze, online, u sportovních týmů po domluvě i v klubu
@@ -24,11 +25,15 @@ Jazyk: čeština (cs-CZ)
 
 ## Služby
 
-- [Individuální psychoterapie](https://www.jan-holik.cz/#sluzby): pro dospělé
-  a dospívající, kteří se cítí přetížení, hledají svůj směr nebo chtějí lépe
-  zvládat úzkost a nejistotu.
-- [Párová a rodinná terapie](https://www.jan-holik.cz/#sluzby): když se doma
-  přestává mluvit nebo se stále dokola vrací stejný konflikt.
+- [Individuální psychoterapie](https://www.jan-holik.cz/individualni-psychoterapie):
+  pro dospělé a dospívající, kteří se cítí přetížení, hledají svůj směr nebo
+  chtějí lépe zvládat úzkost a nejistotu. Sezení 50 minut, osobně v Praze 5
+  nebo online, první setkání k ničemu nezavazuje.
+- [Párová a rodinná terapie](https://www.jan-holik.cz/parova-a-rodinna-terapie):
+  když se doma přestává mluvit nebo se stále dokola vrací stejný konflikt.
+  Společný prostor, kde je slyšet každý; terapeut nestraní nikomu.
+- [Daseinsanalýza](https://www.jan-holik.cz/daseinsanalyza): vysvětlení
+  přístupu, ze kterého terapie vychází — původ, průběh, pro koho se hodí.
 - [Sportovní koučink a mentální příprava](https://www.jan-holik.cz/sportovni-koucink):
   mentální příprava individuálních sportovců, trenérů a celých týmů —
   v tréninkovém cyklu, před závodem i po zranění.
@@ -88,8 +93,14 @@ s trenérem nebo v týmu, konec kariéry a co bude dál.
 
 ## Stránky
 
-- [Úvod](https://www.jan-holik.cz/): služby, přístup, jak spolupráce
-  probíhá, o mně, kvalifikace, kontakt.
+- [Úvod](https://www.jan-holik.cz/): psychoterapeut Praha 5 — služby,
+  přístup, jak spolupráce probíhá, o mně, kvalifikace, kontakt.
+- [Individuální psychoterapie](https://www.jan-holik.cz/individualni-psychoterapie):
+  s čím lidé přicházejí, průběh, časté otázky.
+- [Párová a rodinná terapie](https://www.jan-holik.cz/parova-a-rodinna-terapie):
+  pro koho, průběh, časté otázky.
+- [Daseinsanalýza](https://www.jan-holik.cz/daseinsanalyza): co to je a jak
+  vypadá v terapii.
 - [Sportovní koučink](https://www.jan-holik.cz/sportovni-koucink):
   mentální příprava sportovců, trenérů a týmů — pro koho to je, témata,
   průběh spolupráce, kvalifikace.
