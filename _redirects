@@ -1,0 +1,4 @@
+# Trvalá přesměrování starých adres z Wixu. Google je stále zná a ukazuje
+# ve výsledcích; bez přesměrování vracely 404 (viz Search Console).
+/mentalni-kouc  /sportovni-koucink  301
+/home           /                   301

@@ -5,6 +5,11 @@ Production build of the two Claude Design mockups from this handoff bundle:
 - `project/Jan Holík - web.dc.html` → `index.html` (homepage)
 - `project/Jan Holík - sport.dc.html` → `sportovni-koucink.html` (sport coaching subpage)
 
+Since October 2026 the site is positioned as a **psychotherapist in Praha 5
+(Nové Butovice)** first; coaching is secondary. Therapy has its own pages
+(`individualni-psychoterapie.html`, `parova-a-rodinna-terapie.html`,
+`daseinsanalyza.html`) built from the same components.
+
 Plain HTML/CSS, no build step, no framework, no dependency on the Testuvion
 design-system files under `project/_ds/` (their tokens were reproduced
 directly in `css/styles.css` so this folder is self-contained).
@@ -13,16 +18,23 @@ directly in `css/styles.css` so this folder is self-contained).
 
 ```
 site/
-  index.html                    homepage
+  index.html                    homepage (psychoterapeut Praha 5)
+  individualni-psychoterapie.html   individual therapy service page (+ FAQ schema)
+  parova-a-rodinna-terapie.html     couples & family therapy service page (+ FAQ schema)
+  daseinsanalyza.html           article explaining the therapeutic approach
   sportovni-koucink.html        "Sportovní koučink" subpage
   ochrana-osobnich-udaju.html   GDPR privacy policy
+  404.html                      custom not-found page (needs not_found_handling
+                                = "404-page" in the Worker's assets config)
   css/styles.css                @font-face + tokens + all component/layout styles
+  js/nav.js                     mobile menu toggle (the only script on the site)
   robots.txt                    crawl rules + sitemap reference
-  sitemap.xml                   both URLs, with image entries
+  sitemap.xml                   all indexable URLs, with image entries
   llms.txt                      plain-text summary for AI assistants
-  favicon.svg                   "JH" monogram, brand gradient
+  favicon.svg / favicon.ico     "JH" monogram, brand gradient
   apple-touch-icon.png          180×180 iOS home-screen icon
-  _headers                      Cloudflare Pages / Netlify response headers
+  _headers                      Cloudflare response headers
+  _redirects                    301s for old Wix URLs (/mentalni-kouc, /home)
   fonts/                        self-hosted woff2 (see note below)
     quicksand-latin.woff2       body + headings, latin subset
     quicksand-latin-ext.woff2   same, Czech diacritics
@@ -30,13 +42,14 @@ site/
     geist-latin-ext.woff2       same, Czech diacritics
     LICENSE.txt                 SIL Open Font License 1.1 for both families
   assets/
-    holik-portret.jpg           homepage hero (derived from fotka1.jpg)
+    holik-portret.jpg           homepage hero, JPEG fallback 960×1280 (from fotka1.jpg)
+    holik-portret-480.avif      homepage hero, AVIF for phones
+    holik-portret-960.avif      homepage hero, AVIF for desktop / retina
     beach.avif                  sport page hero
     golf.avif                   sport page "Proč právě já"
     holik.avif                  square portrait, used in og-image.jpg
     og-image.jpg                1200×630 social/search preview card
     fotka1.jpg                  ORIGINAL camera file — source only, not served
-    texture-noise.png           grain overlay used on the dark quote bands
 ```
 
 ## Fonts

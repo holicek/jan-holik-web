@@ -14,7 +14,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="cs_CZ">
-<meta property="og:site_name" content="Bc. Jan Holík — psychoterapie a koučink">
+<meta property="og:site_name" content="Bc. Jan Holík — psychoterapeut, Praha 5">
 <meta property="og:url" content="https://www.jan-holik.cz/ochrana-osobnich-udaju">
 <meta property="og:title" content="Ochrana osobních údajů — Bc. Jan Holík">
 <meta property="og:description" content="Jak nakládám s osobními údaji návštěvníků webu a lidí, kteří mi napíšou. Bez cookies, bez analytiky, bez sledování.">
@@ -25,6 +25,7 @@
 <meta property="og:image:alt" content="Bc. Jan Holík — psychoterapeut a kouč ICF, Praha">
 
 <!-- Ikony -->
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -35,6 +36,7 @@
 <link rel="preload" href="/fonts/quicksand-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 
 <link rel="stylesheet" href="/css/styles.css">
+<script src="/js/nav.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -72,16 +74,20 @@
   <div class="wrap">
     <a href="/" class="brand">
       <strong>Jan Holík</strong>
-      <span>terapie &amp; koučink</span>
+      <span>psychoterapeut · Praha 5</span>
     </a>
-    <nav class="main-nav" aria-label="Hlavní navigace">
-      <a href="/#sluzby">Služby</a>
+    <nav class="main-nav" id="hlavni-nav" aria-label="Hlavní navigace">
+      <a href="/#sluzby">Terapie</a>
       <a href="/#jak">Jak to probíhá</a>
       <a href="/sportovni-koucink">Sport</a>
       <a href="/#o-mne">O mně</a>
       <a href="/#kontakt">Kontakt</a>
     </nav>
     <a href="/#kontakt" class="btn btn--primary btn--sm">Napsat mi</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hlavni-nav" aria-label="Otevřít menu">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
   </div>
 </header>
 
@@ -202,10 +208,11 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>© Jan Holík · IČO 74331175 · Praha — Online</span>
+    <span>© Jan Holík · IČO 74331175 · Psychoterapeut, Praha 5 — Online</span>
     <nav aria-label="Odkazy v zápatí">
       <a href="/">Úvod</a>
-      <a href="/#sluzby">Služby</a>
+      <a href="/individualni-psychoterapie">Individuální terapie</a>
+      <a href="/parova-a-rodinna-terapie">Páry a rodiny</a>
       <a href="/sportovni-koucink">Sportovní koučink</a>
       <a href="/#kontakt">Kontakt</a>
       <a href="/ochrana-osobnich-udaju">Ochrana osobních údajů</a>

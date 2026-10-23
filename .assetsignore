@@ -1,0 +1,12 @@
+# Soubory z repozitáře, které nemají být veřejně dostupné na webu.
+.git
+.gitignore
+.claude
+.DS_Store
+.assetsignore
+wrangler.jsonc
+README.md
+assets/fotka1.jpg
+fonts/LICENSE.txt
+.wrangler
+node_modules

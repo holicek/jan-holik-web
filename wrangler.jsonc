@@ -1,0 +1,17 @@
+// Konfigurace Workeru pro Cloudflare Workers Builds. Web je čistě statický:
+// žádný skript, jen adresář assets. Bez tohoto souboru selhávalo
+// `wrangler versions upload` pro náhledové větve ("Missing entry-point").
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jan-holik-web",
+  "compatibility_date": "2026-10-01",
+  // Workers Logs zůstávají zapnuté jako dosud (dřívější automaticky generovaná konfigurace).
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./",
+    // Bezpříponové URL: /sportovni-koucink.html -> /sportovni-koucink, /index.html -> /
+    "html_handling": "auto-trailing-slash",
+    // Neexistující adresa vrátí 404.html místo prázdné odpovědi.
+    "not_found_handling": "404-page"
+  }
+}
