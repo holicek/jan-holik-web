@@ -8,3 +8,5 @@ wrangler.jsonc
 README.md
 assets/fotka1.jpg
 fonts/LICENSE.txt
+.wrangler
+node_modules
